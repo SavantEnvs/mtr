@@ -1,0 +1,10 @@
+project: savantenvs/mtr
+target: mtr-fuzz-ip4
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mtr-fuzz-ip4/testsuite
+
+cmds:
+  - cmd: /mayhem/mtr-fuzz-ip4
+    libfuzzer: true

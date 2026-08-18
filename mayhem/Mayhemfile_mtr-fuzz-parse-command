@@ -1,0 +1,10 @@
+project: savantenvs/mtr
+target: mtr-fuzz-parse-command
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mtr-fuzz-parse-command/testsuite
+
+cmds:
+  - cmd: /mayhem/mtr-fuzz-parse-command
+    libfuzzer: true

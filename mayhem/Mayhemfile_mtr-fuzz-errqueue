@@ -1,0 +1,10 @@
+project: savantenvs/mtr
+target: mtr-fuzz-errqueue
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mtr-fuzz-errqueue/testsuite
+
+cmds:
+  - cmd: /mayhem/mtr-fuzz-errqueue
+    libfuzzer: true
